@@ -1,5 +1,8 @@
 var debug=false;
 
+var ua = navigator.userAgent;
+var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+
 // var explore_plugin_usb='/explore_plugin.sprx';
 // var explore_plugin_blind='/dev_blind/vsh/module/explore_plugin.sprx';
 // var explore_plugin_fsize=0x18CD85;
@@ -1204,6 +1207,14 @@ function loadcex_482()
 	gadget_mod15_addr=gadget_mod15_addr_482;
 	gadget_mod16_addr=gadget_mod16_addr_482;
 }
+/*
+function dex()
+{
+		if(document.getElementById('dex').checked===true){loaddex_481();}//alert("calling loaddex_481");
+		else {loadcex_481();}
+		disable_trigger();
+}
+*/
 function dex()
 {
 	switch (fwVersion) {
